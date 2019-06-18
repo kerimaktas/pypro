@@ -1,0 +1,20 @@
+[
+{
+  "fields": {
+    "first_name": "Abdülkerim AKTAŞ",
+    "last_name": "AKTAŞ",
+    "email": "softwareprogkrm@gmail.com"
+  },
+  "model": "speaker.speaker",
+  "pk": 1
+},
+{
+  "fields": {
+    "first_name": "K",
+    "last_name": "G\u00fcler",
+    "email": "softwareprogkrm@gmail.com"
+  },
+  "model": "speaker.speaker",
+  "pk": 2
+}
+]

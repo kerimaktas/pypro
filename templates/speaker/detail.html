@@ -1,0 +1,33 @@
+{% extends "dashboard.html" %}
+
+{% load staticfiles %}
+
+{% block title %} - {{ object.get_fullname }}{% endblock title %}
+
+{% block content %}
+<div class="row">
+ <div class="col-sm-3 col-md-3">
+    <div class="thumbnail" style="border:none">
+      <img src="{% static "images/default.jpg" %}" width="300">
+      <div class="caption">
+        <h4>{{ object.get_fullname }}</h4>
+      </div>
+    </div>
+  </div>
+  <p>Adı: Abdülkerim </p> <p>Soyadı: AKTAŞ</p>
+              <p>Okuduğu okullar: Bursa Uludağ Üniversitesi </p>
+              <p>Çalışmaları: Robotik Kodlama,Uzay Bilimleri,Yazılım,Eğitim Geliştirme,Teknoloji geliştirme </p>
+              <p>Sosyal Medya: Instegram: a.kerim_aktas</p>
+              <p>Linkedin: Abdülkerim AKTAŞ</p>
+  <div class="col-md-8">
+    <ul>
+        {% for presentation in object.presentations.all %}
+            
+              
+              
+            
+        {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock content %}

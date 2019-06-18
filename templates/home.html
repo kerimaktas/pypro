@@ -1,0 +1,48 @@
+{% extends "dashboard.html" %}
+
+{% load staticfiles %}
+{% load url from future %}
+
+{% block content %}
+        <div class="jumbotron">
+            
+            <div align="center"><img src="{% static 'images/a.png' %}" width="850px" height="450px"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                  <div class="panel-heading" style="background-color: #34495E">
+                    Son Eklenen Araştırmalar
+                  </div>
+                  <div class="panel-body">
+                    <ul>
+                        {% for presentation in presentations %}
+                            <li>
+                                <a href="{{ presentation.get_absolute_url }}">
+                                    {{ presentation.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                  <div class="panel-heading" style="background-color: #34495E">
+                    Araştırmacı
+                  </div>
+                  <div class="panel-body">
+                        {% for speaker in speakers %}
+                            <li>
+                                <a href="{{ speaker.get_absolute_url }}">
+                                    {{ speaker.get_fullname }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                  </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}
